@@ -9,12 +9,12 @@ public class UIManager : MonoBehaviour
 
     public Character character;
 
-    [SerializeField] private GameObject uiMainMenu;
-    [SerializeField] private GameObject uiStatus;
-    [SerializeField] private GameObject uiInventory;
-    public GameObject UIMainMenu { get { return uiMainMenu; } }
-    public GameObject UIStatus {  get { return uiStatus; } }
-    public GameObject UIInventory { get { return uiInventory; } }
+    [SerializeField] private UIMainMenu uiMainMenu;
+    [SerializeField] private UIStatus uiStatus;
+    [SerializeField] private UIInventory uiInventory;
+    public UIMainMenu UIMainMenu { get { return uiMainMenu; } }
+    public UIStatus UIStatus {  get { return uiStatus; } }
+    public UIInventory UIInventory { get { return uiInventory; } }
 
     public void Awake()
     {

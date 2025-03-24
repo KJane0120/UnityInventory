@@ -9,7 +9,6 @@ public class UIStatus : MonoBehaviour
     [SerializeField] private TextMeshProUGUI hpText;
     [SerializeField] private TextMeshProUGUI critText;
     [SerializeField] private Button backBtn;
-    [SerializeField] private GameObject popupBtn;
 
     private void Start()
     {
@@ -18,8 +17,8 @@ public class UIStatus : MonoBehaviour
 
     private void Back()
     {
-        UIManager.Instance.UIStatus.SetActive(false);
-        popupBtn.SetActive(true);
+        UIManager.Instance.UIStatus.gameObject.SetActive(false);
+        UIManager.Instance.UIMainMenu.PopupBtn.SetActive(true);
     }
     
 }

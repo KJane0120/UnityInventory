@@ -429,9 +429,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 646685854}
-  uiMainMenu: {fileID: 1976393276}
-  uiStatus: {fileID: 184351035}
-  uiInventory: {fileID: 1819761349}
+  uiMainMenu: {fileID: 1976393281}
+  uiStatus: {fileID: 184351040}
+  uiInventory: {fileID: 1819761354}
 --- !u!1 &96963415
 GameObject:
   m_ObjectHideFlags: 0
@@ -5569,7 +5569,6 @@ MonoBehaviour:
   haveNum: {fileID: 465025205}
   allNum: {fileID: 1770705132}
   backBtn: {fileID: 1485031574}
-  popupBtn: {fileID: 785600305}
 --- !u!1 &1843326032
 GameObject:
   m_ObjectHideFlags: 0
