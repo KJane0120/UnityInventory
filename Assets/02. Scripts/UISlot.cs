@@ -2,9 +2,7 @@
 
 public class UISlot : MonoBehaviour
 {
-    [SerializeField] private GameObject[] slots;
-    
-
+    public GameObject Prefab;
     public void SetItem()
     {
 

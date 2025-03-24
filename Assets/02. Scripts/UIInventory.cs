@@ -8,9 +8,10 @@ public class UIInventory : MonoBehaviour
     [SerializeField] private TextMeshProUGUI haveNum;
     [SerializeField] private TextMeshProUGUI allNum;
     [SerializeField] private Button backBtn;
-    [SerializeField] private UISlot[] slots;
+    [SerializeField] private UISlot slot;
+    [SerializeField] private Transform content;
 
-    public List<UISlot> uISlots = new List<UISlot>();
+    public List<UISlot> UISlots = new List<UISlot>();
 
     private void Start()
     {
@@ -26,6 +27,16 @@ public class UIInventory : MonoBehaviour
 
     private void InitInventoryUI()
     {
+        if (slot == null) return;
+
+        //아이템이 있다면
+        UISlot newPrefab = Instantiate(slot.Prefab, content).GetComponent<UISlot>();
+        
+        for (int i = 0; i < UISlots.Count; i++)
+        {
+            UISlots.Add(newPrefab);
+        }
+
 
     }
 }
