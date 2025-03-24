@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
 
     public void SetData()
     {
-        player = new Character("JaeM", 10, 35, 40, 100, 25, 20000, player.Inventory);
+        player = new Character("JaeM", 10, 35, 40, 100, 25, 20000);
         UIManager.Instance.UIMainMenu.SettingInfo();
         UIManager.Instance.UIStatus.SettingInfo();
     }

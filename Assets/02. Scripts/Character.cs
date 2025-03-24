@@ -16,7 +16,7 @@ public class Character
 
 
 
-    public Character(string id, int lv, int atk, int def, int hp, int crit, int gold, List<Item> inventory) //생성자
+    public Character(string id, int lv, int atk, int def, int hp, int crit, int gold) //생성자
     {
         this.ID = id;
         this.Level = lv;
@@ -25,7 +25,7 @@ public class Character
         this.HP = hp;
         this.Crit = crit;
         this.Gold = gold;
-        this.Inventory = inventory;
+        //this.Inventory = inventory;
     }
 
     public void OnClickItem()

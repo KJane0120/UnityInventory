@@ -12,14 +12,27 @@ public class UIMainMenu : MonoBehaviour
     [SerializeField] private Button statusBtn;
     [SerializeField] private Button inventoryBtn;
     [SerializeField] private Slider lvBar;
+    private int curValue;
+    private int maxValue;
 
     private void Start()
     {
         statusBtn.onClick.AddListener(OpenStatus);
         inventoryBtn.onClick.AddListener(OpenInventory);
-
+        curValue = 80;
+        maxValue = 100;
     }
 
+    private void Update()
+    {
+        lvBar.value = GetPercentage();
+    }
+
+    public float GetPercentage()
+    {
+        float temp = (float)curValue / maxValue;
+        return temp;
+    }
     public void SettingInfo()
     {
         goldText.text = string.Format("{0:N0}", GameManager.Instance.player.Gold);
