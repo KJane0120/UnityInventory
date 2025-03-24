@@ -15,6 +15,14 @@ public class UIStatus : MonoBehaviour
         backBtn.onClick.AddListener(Back);
     }
 
+    public void SettingInfo()
+    {
+        atkText.text = string.Format("{0:N0}", GameManager.Instance.player.ATK);
+        defText.text = string.Format("{0:N0}", GameManager.Instance.player.DEF);
+        hpText.text = string.Format("{0:N0}", GameManager.Instance.player.HP);
+        critText.text = string.Format("{0:N0}", GameManager.Instance.player.Crit);
+        
+    }
     private void Back()
     {
         UIManager.Instance.UIStatus.gameObject.SetActive(false);

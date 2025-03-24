@@ -428,7 +428,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06934fd6ef4e0b241bd5b74949868684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 646685854}
   uiMainMenu: {fileID: 1976393281}
   uiStatus: {fileID: 184351040}
   uiInventory: {fileID: 1819761354}
@@ -1049,7 +1048,6 @@ MonoBehaviour:
   hpText: {fileID: 800536165}
   critText: {fileID: 2054426307}
   backBtn: {fileID: 1094550268}
-  popupBtn: {fileID: 785600305}
 --- !u!1 &294725951
 GameObject:
   m_ObjectHideFlags: 0
@@ -2706,7 +2704,6 @@ GameObject:
   - component: {fileID: 646685851}
   - component: {fileID: 646685853}
   - component: {fileID: 646685852}
-  - component: {fileID: 646685854}
   m_Layer: 5
   m_Name: Character
   m_TagString: Untagged
@@ -2771,24 +2768,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 646685850}
   m_CullTransparentMesh: 1
---- !u!114 &646685854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 646685850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 134d05bdd3a17b94da6f5df7032faa2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ID: 
-  Level: 0
-  ATK: 0
-  DEF: 0
-  HP: 0
-  Crit: 0
 --- !u!1 &676718093
 GameObject:
   m_ObjectHideFlags: 0
@@ -3368,7 +3347,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dbe6066434033374f9506092d93044ff, type: 2}
   m_sharedMaterial: {fileID: 9106390933707722618, guid: dbe6066434033374f9506092d93044ff, type: 2}
@@ -3502,7 +3481,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 35
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dbe6066434033374f9506092d93044ff, type: 2}
   m_sharedMaterial: {fileID: 9106390933707722618, guid: dbe6066434033374f9506092d93044ff, type: 2}
@@ -3636,7 +3615,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 40
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dbe6066434033374f9506092d93044ff, type: 2}
   m_sharedMaterial: {fileID: 9106390933707722618, guid: dbe6066434033374f9506092d93044ff, type: 2}
@@ -6987,7 +6966,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 25
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dbe6066434033374f9506092d93044ff, type: 2}
   m_sharedMaterial: {fileID: 9106390933707722618, guid: dbe6066434033374f9506092d93044ff, type: 2}
