@@ -429,6 +429,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 646685854}
+  uiMainMenu: {fileID: 1976393276}
+  uiStatus: {fileID: 184351035}
+  uiInventory: {fileID: 1819761349}
 --- !u!1 &96963415
 GameObject:
   m_ObjectHideFlags: 0

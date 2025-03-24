@@ -9,9 +9,12 @@ public class UIManager : MonoBehaviour
 
     public Character character;
 
-    public GameObject UIMainMenu { get { return GetComponentInChildren<UIMainMenu>(true).gameObject; } }
-    public GameObject UIStatus {  get { return GetComponentInChildren<UIStatus>(true).gameObject; } }
-    public GameObject UIInventory { get { return GetComponentInChildren<UIInventory>(true).gameObject; } }
+    [SerializeField] private GameObject uiMainMenu;
+    [SerializeField] private GameObject uiStatus;
+    [SerializeField] private GameObject uiInventory;
+    public GameObject UIMainMenu { get { return uiMainMenu; } }
+    public GameObject UIStatus {  get { return uiStatus; } }
+    public GameObject UIInventory { get { return uiInventory; } }
 
     public void Awake()
     {
