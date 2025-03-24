@@ -30,13 +30,12 @@ public class UIInventory : MonoBehaviour
         if (slot == null) return;
 
         //아이템이 있다면
-        UISlot newPrefab = Instantiate(slot.Prefab, content).GetComponent<UISlot>();
-        
-        for (int i = 0; i < UISlots.Count; i++)
+
+        int count = 5;
+        for (int i = 0; i < count; i++)
         {
-            UISlots.Add(newPrefab);
+            UISlot newSlot = Instantiate(slot.Prefab, content).GetComponent<UISlot>();
+            UISlots.Add(newSlot);
         }
-
-
     }
 }
