@@ -1,4 +1,6 @@
-﻿[System.Serializable]
+﻿using System.Collections.Generic;
+
+[System.Serializable]
 public class Character
 {
     public string ID {  get; private set; }
@@ -10,8 +12,11 @@ public class Character
     public int HP { get; private set; }
     public int Crit { get; private set; }
 
+    public List<Item> Inventory;
 
-    public Character(string id, int lv, int atk, int def, int hp, int crit, int gold) //생성자
+
+
+    public Character(string id, int lv, int atk, int def, int hp, int crit, int gold, List<Item> inventory) //생성자
     {
         this.ID = id;
         this.Level = lv;
@@ -20,5 +25,31 @@ public class Character
         this.HP = hp;
         this.Crit = crit;
         this.Gold = gold;
+        this.Inventory = inventory;
+    }
+
+    public void OnClickItem()
+    {
+
+    }
+
+    public void AddItem()
+    {
+
+    }
+
+    public void Equip()
+    {
+
+    }
+
+    private bool IsEquip()
+    {
+        return false;
+    }
+
+    public void UnEquip()
+    {
+
     }
 }

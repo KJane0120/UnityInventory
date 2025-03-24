@@ -5478,7 +5478,7 @@ MonoBehaviour:
   haveNum: {fileID: 465025205}
   allNum: {fileID: 1770705132}
   backBtn: {fileID: 1485031574}
-  slot: {fileID: 0}
+  slot: {fileID: 5105112836517023117, guid: 6cbc6c987ad961847aed20aad0b42dc5, type: 3}
   content: {fileID: 1908510926}
   UISlots: []
 --- !u!1 &1843326032
