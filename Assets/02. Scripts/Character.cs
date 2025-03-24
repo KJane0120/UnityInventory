@@ -2,14 +2,14 @@
 
 public class Character : MonoBehaviour
 {
-    public string ID;
-    public int Level;
+    public string ID {  get; private set; }
+    public int Level { get; private set; }
     //public string Tier;
     //public int Gold;
-    public int ATK;
-    public int DEF;
-    public int HP;
-    public int Crit;
+    public int ATK { get; private set; }
+    public int DEF { get; private set; }
+    public int HP { get; private set; }
+    public int Crit { get; private set; }
 
     public Character(string id, int lv, int atk, int def, int hp, int crit) //생성자
     {
