@@ -1,18 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
+﻿using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIStatus : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private TextMeshProUGUI atkText;
+    [SerializeField] private TextMeshProUGUI defText;
+    [SerializeField] private TextMeshProUGUI hpText;
+    [SerializeField] private TextMeshProUGUI critText;
+    [SerializeField] private Button backBtn;
+    [SerializeField] private GameObject popupBtn;
+
+    private void Start()
     {
-        
+        backBtn.onClick.AddListener(Back);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Back()
     {
-        
+        UIManager.Instance.UIStatus.SetActive(false);
+        popupBtn.SetActive(true);
     }
+    
 }
