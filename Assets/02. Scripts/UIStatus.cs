@@ -14,8 +14,12 @@ public class UIStatus : MonoBehaviour
     {
         backBtn.onClick.AddListener(Back);
     }
+    private void LateUpdate()
+    {
+        PlayerStatInfo();
+    }
 
-    public void SettingInfo()
+    public void PlayerStatInfo()
     {
         atkText.text = string.Format("{0:N0}", GameManager.Instance.player.ATK);
         defText.text = string.Format("{0:N0}", GameManager.Instance.player.DEF);

@@ -6,10 +6,14 @@ using UnityEngine.UI;
 public class UIInventory : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI haveNum;
-    [SerializeField] private TextMeshProUGUI allNum;
     [SerializeField] private Button backBtn;
     [SerializeField] private UISlot slot;
     [SerializeField] private Transform content;
+
+    public Item item { get { return GameManager.Instance.player.item; } }
+
+    public Item selectedItem;
+
 
     public List<UISlot> UISlots = new List<UISlot>();
 
@@ -25,17 +29,21 @@ public class UIInventory : MonoBehaviour
         UIManager.Instance.UIMainMenu.PopupBtn.SetActive(true);
     }
 
+    public void InventoryInfo()
+    {
+        haveNum.text = string.Format("{0:N0}", GameManager.Instance.player.Inventory.Count);
+    }
+
     private void InitInventoryUI()
     {
         if (slot == null) return;
 
-        //아이템이 있다면
-
-        int count = 5;
-        for (int i = 0; i < count; i++)
+        for (int i = 0; i < GameManager.Instance.player.Inventory.Count; i++)
         {
-            UISlot newSlot = Instantiate(slot.Prefab, content).GetComponent<UISlot>();
+            UISlot newSlot = Instantiate(slot, content);
             UISlots.Add(newSlot);
         }
     }
+
+    //public void //선택한 아이템
 }

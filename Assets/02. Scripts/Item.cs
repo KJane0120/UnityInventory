@@ -1,17 +1,34 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
-public class Item : MonoBehaviour
+public enum ItemType
 {
-    public ItemData data;
+    ATK,
+    DEF,
+    HP,
+    Crit
+}
 
-    public ItemType type { get {return data.type; } }
-    public Sprite icon { get {return data.icon;} }
+public class Item
+{
+    [Header("Info")]
+    public ItemType type;
+    public string icon;
 
-    //public ItemValue Value { get {return data.value;} }
+    [Header("Stat")]
+    public int Value;
+    //public int EquipATK;
+    //public int EquipDEF;
+    //public int EquipHP;
+    //public int EquipCrit;
 
-    //public Item(Sprite icon, ItemType type, ItemValue value)
-    //{
-    //    this.icon = icon;
-    //    this.type = type;
-    //}
+
+    //[Header("Equip")]
+    //public GameObject equipPrefab;
+    public Item(string icon, ItemType type, int value)
+    {
+        this.icon = icon;
+        this.type = type;
+        this.Value = value;
+    }
 }

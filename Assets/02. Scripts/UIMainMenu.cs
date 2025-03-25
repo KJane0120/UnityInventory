@@ -33,7 +33,7 @@ public class UIMainMenu : MonoBehaviour
         float temp = (float)curValue / maxValue;
         return temp;
     }
-    public void SettingInfo()
+    public void ReSourceInfo()
     {
         goldText.text = string.Format("{0:N0}", GameManager.Instance.player.Gold);
     }
