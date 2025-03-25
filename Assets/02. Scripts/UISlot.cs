@@ -6,9 +6,14 @@ public class UISlot : MonoBehaviour
 {
     public Item item;
     [SerializeField] private Image icon;
-    [SerializeField] private Image equipCheck;
-    public bool equipped { get { return GameManager.Instance.player.IsEquipped; } }
+    public Image equipCheck;
+    [SerializeField] private Button equipifClick;
 
+    private void Start()
+    {
+        Debug.Log("연결");
+        equipifClick.onClick.AddListener(() => GameManager.Instance.player.OnEquip(this));
+    }
 
     public void SetItem(Item data) // 슬롯에 아이템 데이터 추가
     {
@@ -36,7 +41,7 @@ public class UISlot : MonoBehaviour
 
     public void RefreshUI() //데이터를 UI에 표시
     {
-        for(int i = 0; i < UIManager.Instance.UIInventory.UISlots.Count; i++)
+        for (int i = 0; i < UIManager.Instance.UIInventory.UISlots.Count; i++)
         {
             UIManager.Instance.UIInventory.UISlots[i].SetItem(GameManager.Instance.player.Inventory[i]);
         }

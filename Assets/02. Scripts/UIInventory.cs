@@ -7,19 +7,17 @@ public class UIInventory : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI haveNum;
     [SerializeField] private Button backBtn;
-    [SerializeField] private UISlot slot;
+    public UISlot slot;
     [SerializeField] private Transform content;
 
     public Item item { get { return GameManager.Instance.player.item; } }
-
-    public Item selectedItem;
-
 
     public List<UISlot> UISlots = new List<UISlot>();
 
     private void Start()
     {
         backBtn.onClick.AddListener(Back);
+        InitInventoryUI();
     }
 
     private void Back()
@@ -33,7 +31,7 @@ public class UIInventory : MonoBehaviour
         haveNum.text = string.Format("{0:N0}", GameManager.Instance.player.Inventory.Count);
     }
 
-    public void InitInventoryUI()
+    public void InitInventoryUI() //슬롯 생성해주는 함수
     {
         if (slot == null) return;
 

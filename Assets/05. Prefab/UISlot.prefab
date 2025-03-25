@@ -302,6 +302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 5017511643530205880}
   equipCheck: {fileID: 498788817708816682}
+  equipifClick: {fileID: 5506832512897447605}
 --- !u!114 &5506832512897447605
 MonoBehaviour:
   m_ObjectHideFlags: 0
