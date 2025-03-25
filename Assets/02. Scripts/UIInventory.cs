@@ -20,7 +20,6 @@ public class UIInventory : MonoBehaviour
     private void Start()
     {
         backBtn.onClick.AddListener(Back);
-        InitInventoryUI();
     }
 
     private void Back()
@@ -34,7 +33,7 @@ public class UIInventory : MonoBehaviour
         haveNum.text = string.Format("{0:N0}", GameManager.Instance.player.Inventory.Count);
     }
 
-    private void InitInventoryUI()
+    public void InitInventoryUI()
     {
         if (slot == null) return;
 
@@ -43,7 +42,6 @@ public class UIInventory : MonoBehaviour
             UISlot newSlot = Instantiate(slot, content);
             UISlots.Add(newSlot);
         }
+        slot.RefreshUI();
     }
-
-    //public void //선택한 아이템
 }

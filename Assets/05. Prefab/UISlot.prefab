@@ -300,8 +300,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0beb9015e121f554c9ddc17d4ad5006f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
-  equipCheck: {fileID: 0}
+  icon: {fileID: 5017511643530205880}
+  equipCheck: {fileID: 498788817708816682}
 --- !u!114 &5506832512897447605
 MonoBehaviour:
   m_ObjectHideFlags: 0
