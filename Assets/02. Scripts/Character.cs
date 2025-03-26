@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using UnityEngine;
 
 [System.Serializable]
 public class Character
@@ -16,8 +15,6 @@ public class Character
     public List<Item> Inventory;
     public List<Item> EquipList;
     public bool IsEquipped;
-    //public GameObject equipCheck { get { return UIManager.Instance.UIInventory.slot.equipCheck; } }
-
 
     public Character(string id, int lv, int atk, int def, int hp, int crit, int gold) //생성자
     {
@@ -32,11 +29,21 @@ public class Character
         this.EquipList = new List<Item>();
     }
 
+    /// <summary>
+    /// 인벤토리 리스트에 아이템을 추가합니다. 
+    /// </summary>
+    /// <param name="item"></param>
     public void AddItem(Item item)
     {
         Inventory.Add(item);
     }
 
+    /// <summary>
+    /// 아이템을 선택했을 때 호출되는 함수입니다. 
+    /// 이미 장착중이면 해제, 장착중이 아니면 장착을 합니다. 
+    /// 장비 스탯을 캐릭터 스탯에 반영합니다. 
+    /// </summary>
+    /// <param name="slot"></param>
     public void OnEquip(UISlot slot)
     {
         //선택한 아이템이 이미 장착중이라면 해제
@@ -67,6 +74,11 @@ public class Character
         }
     }
 
+    /// <summary>
+    /// EquipList에 있는지 여부로 장착중인지를 검사합니다. 
+    /// </summary>
+    /// <param name="slot"></param>
+    /// <returns></returns>
     public bool IsEquip(UISlot slot)
     {
         for (int i = 0; i < EquipList.Count; i++)
@@ -79,30 +91,11 @@ public class Character
         return false;
     }
 
-    //public void OnUnEquip(Item item)
-    //{
-    //    if (IsEquip(item)) return; // 장착중이라면 반환
-
-    //    switch (item.type)
-    //    {
-    //        case ItemType.ATK:
-    //            ATK -= item.Value;
-    //            break;
-    //        case ItemType.DEF:
-    //            DEF -= item.Value;
-    //            break;
-    //        case ItemType.HP:
-    //            HP -= item.Value;
-    //            break;
-    //        case ItemType.Crit:
-    //            Crit -= item.Value;
-    //            break;
-    //    }
-    //    IsEquipped = false;
-    //    equipCheck.gameObject.SetActive(false);
-    //    EquipList.Remove(item);
-    //}
-
+    /// <summary>
+    /// 이미 장착중일 때 호출되는 함수입니다. 
+    /// 장비 스탯을 캐릭터 스탯에 반영합니다. 
+    /// </summary>
+    /// <param name="slot"></param>
     public void UnEquip(UISlot slot)
     {
         switch (slot.item.type)

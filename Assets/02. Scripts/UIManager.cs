@@ -1,8 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
+/// <summary>
+/// UIMainMenu, UIStatus, UIInventory를 연결하는 싱글톤 클래스입니다. 
+/// </summary>
 public class UIManager : MonoBehaviour
 {
     private static UIManager instance;
@@ -37,5 +37,4 @@ public class UIManager : MonoBehaviour
     {
         UIMainMenu.GetComponent<UIMainMenu>().OpenMainMenu();
     }
-
 }

@@ -22,16 +22,22 @@ public class UIInventory : MonoBehaviour
 
     private void Back()
     {
-        UIManager.Instance.UIInventory.gameObject.SetActive(false);
+        this.gameObject.SetActive(false);
         UIManager.Instance.UIMainMenu.PopupBtn.SetActive(true);
     }
 
+    /// <summary>
+    /// 인벤토리에 추가된 아이템의 개수를 보간문자열로 UI에 표시합니다. 
+    /// </summary>
     public void InventoryInfo()
     {
         haveNum.text = string.Format("{0:N0}", GameManager.Instance.player.Inventory.Count);
     }
 
-    public void InitInventoryUI() //슬롯 생성해주는 함수
+    /// <summary>
+    /// 인벤토리 리스트의 길이만큼 슬롯의 개수를 생성합니다. 
+    /// </summary>
+    public void InitInventoryUI()
     {
         if (slot == null) return;
 

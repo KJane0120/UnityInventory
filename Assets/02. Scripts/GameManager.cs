@@ -28,6 +28,9 @@ public class GameManager : MonoBehaviour
         SetData();
     }
 
+    /// <summary>
+    /// 실행 처음에 기본적인 데이터를 설정합니다.
+    /// </summary>
     public void SetData()
     {
         player = new Character("JaeM", 10, 35, 40, 100, 25, 20000);

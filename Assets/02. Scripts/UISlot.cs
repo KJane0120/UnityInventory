@@ -11,7 +11,6 @@ public class UISlot : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("연결");
         equipifClick.onClick.AddListener(Equip);
     }
 
@@ -26,8 +25,11 @@ public class UISlot : MonoBehaviour
         else equipCheck.SetActive(false);
     }
   
-
-    public void SetItem(Item data) // 슬롯에 아이템 데이터 추가
+    /// <summary>
+    /// 슬롯에 아이템 데이터를 추가합니다. 
+    /// </summary>
+    /// <param name="data"></param>
+    public void SetItem(Item data)
     {
         item = data;
 
@@ -51,7 +53,10 @@ public class UISlot : MonoBehaviour
         }
     }
 
-    public void RefreshUI() //데이터를 UI에 표시
+    /// <summary>
+    /// 각 슬롯에 인벤토리의 아이템 데이터를 할당합니다. 
+    /// </summary>
+    public void RefreshUI()
     {
         for (int i = 0; i < UIManager.Instance.UIInventory.UISlots.Count; i++)
         {
