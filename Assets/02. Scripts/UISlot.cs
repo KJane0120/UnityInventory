@@ -6,14 +6,26 @@ public class UISlot : MonoBehaviour
 {
     public Item item;
     [SerializeField] private Image icon;
-    public Image equipCheck;
+    [SerializeField] private GameObject equipCheck;
     [SerializeField] private Button equipifClick;
 
     private void Start()
     {
         Debug.Log("연결");
-        equipifClick.onClick.AddListener(() => GameManager.Instance.player.OnEquip(this));
+        equipifClick.onClick.AddListener(Equip);
     }
+
+    private void Equip()
+    {
+        GameManager.Instance.player.OnEquip(this);
+
+        if (GameManager.Instance.player.IsEquip(this))
+        {
+            equipCheck.SetActive(true);
+        }
+        else equipCheck.SetActive(false);
+    }
+  
 
     public void SetItem(Item data) // 슬롯에 아이템 데이터 추가
     {

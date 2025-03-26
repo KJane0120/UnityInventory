@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using UnityEngine.UI;
+using UnityEngine;
 
 [System.Serializable]
 public class Character
@@ -16,7 +16,7 @@ public class Character
     public List<Item> Inventory;
     public List<Item> EquipList;
     public bool IsEquipped;
-    public Image equipCheck { get { return UIManager.Instance.UIInventory.slot.equipCheck; } }
+    //public GameObject equipCheck { get { return UIManager.Instance.UIInventory.slot.equipCheck; } }
 
 
     public Character(string id, int lv, int atk, int def, int hp, int crit, int gold) //생성자
@@ -63,7 +63,6 @@ public class Character
                     break;
             }
             IsEquipped = true;
-            equipCheck.gameObject.SetActive(true);
             EquipList.Add(slot.item);
         }
     }
@@ -122,7 +121,6 @@ public class Character
                 break;
         }
         IsEquipped = false;
-        equipCheck.gameObject.SetActive(false);
         EquipList.Remove(slot.item);
     }
 }

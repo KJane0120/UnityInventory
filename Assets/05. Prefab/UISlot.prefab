@@ -301,7 +301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 5017511643530205880}
-  equipCheck: {fileID: 498788817708816682}
+  equipCheck: {fileID: 7923380781037768629}
   equipifClick: {fileID: 5506832512897447605}
 --- !u!114 &5506832512897447605
 MonoBehaviour:
